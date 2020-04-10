@@ -1,0 +1,25 @@
+<h1>Daily Harvest - Search Page</h1>
+<body>
+  <p>Select an ingredient from the dropdown to find delicious products you'll love! Organic Bananas are selected by default!</p>
+  <form method='POST' action='/products/'>
+    <select name='ingredient_id' method='POST' action='/products/'>
+        {% for val in context['ingredients'] %}
+          {% if val['id'] == 3 %}
+            <option value="{{val['id']}}" selected>{{val['name']}}</option>
+          {% else %}
+            <option value="{{ val['id'] }}">{{val['name']}}</option>
+          {% endif %}
+        {% endfor %}
+    </select>
+    <input class="button1" method="POST" type="Submit" value="Search" action="/products/">
+  </form>
+
+
+  {% if context['products'] %}
+    <h2>Here are the products that contain {{ context['ingredient_name'] }}! </h2>
+    {% for product in context['products'] %}
+      <li>{{ product }}</li>
+    {% endfor %}
+  {% endif %}
+
+</body>
