@@ -7,4 +7,4 @@
   * Navigate to the project root and run the Flask developement server using the following commands:
     * export FLASK_APP=daily_harvest.py (NOTE: you can run the server in debug mode by using: export FLASK_APP=development)
     * flask run
-  * Once your server is running, you can navigate to http://127.0.0.1:5000/products/ and use the dropdown to find your new fanorite snack!
+  * Once your server is running, you can navigate to http://127.0.0.1:5000/products/ and use the dropdown to find your new favorite snack!
